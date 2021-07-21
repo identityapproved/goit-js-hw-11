@@ -12,11 +12,15 @@ btnStart.addEventListener('click', () => {
    }
    intervalId = setInterval(changeColor, 1000);
    isActive = true;
+   btnStart.setAttribute("disabled", true);
 });
 
 btnStop.addEventListener('click', () => {
    clearInterval(intervalId);
    isActive = false;
+   btnStart.removeAttribute("disabled", true);
+   // btnStart.setAttribute("disabled", false);
+   // btnStart.setAttribute("disabled", true);
 })
 
 function changeColor() {

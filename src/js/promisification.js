@@ -1,10 +1,11 @@
 // ********************* Subtask 1 ********************
 
 const delay = ms => {
-  return Promise.resolve(
+  return new Promise((resolve) => {
     setTimeout(() => {
-      '${ms}'
-    }, ms));
+      return resolve(ms)
+    }, ms);
+  })
   // Change this function
 };
 
